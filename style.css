@@ -6,15 +6,17 @@ background:#f4f4f4;
 
 header{
 background:black;
-color:white;
-padding:15px;
+padding:10px;
 text-align:center;
-font-size:20px;
+}
+
+.logo{
+height:40px;
 }
 
 .container{
 background:white;
-padding:30px;
+padding:20px;
 }
 
 .product-grid{
@@ -29,12 +31,12 @@ text-align:center;
 }
 
 .gallery img{
-width:320px;
+width:300px;
 }
 
 .thumbs img{
-width:70px;
-margin:10px;
+width:60px;
+margin:5px;
 cursor:pointer;
 }
 
@@ -42,20 +44,14 @@ cursor:pointer;
 flex:1;
 }
 
-.rating{
-margin-top:10px;
-color:#444;
-}
-
 .price{
-margin-top:15px;
-font-size:26px;
+font-size:28px;
+margin-top:10px;
 }
 
 .old{
 text-decoration:line-through;
 color:gray;
-margin-right:10px;
 }
 
 .new{
@@ -65,48 +61,23 @@ font-weight:bold;
 
 .off{
 color:red;
-margin-left:10px;
 }
 
-.delivery{
+.timer{
+color:red;
 margin-top:10px;
-}
-
-.buybtn{
-margin-top:20px;
-background:orange;
-border:none;
-padding:15px;
-font-size:18px;
-cursor:pointer;
 }
 
 .stock{
 margin-top:10px;
-color:red;
 }
 
 .features,
-.specs,
-.reviews,
-.order{
+.order,
+.reviews{
 background:white;
 margin-top:20px;
-padding:25px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-td{
-border:1px solid #ddd;
-padding:10px;
-}
-
-.review{
-margin:12px 0;
+padding:20px;
 }
 
 input{
@@ -115,19 +86,25 @@ padding:12px;
 margin:10px 0;
 }
 
-.orderbtn{
-background:green;
-color:white;
+button{
+background:orange;
 border:none;
 padding:15px;
-font-size:18px;
+font-size:16px;
 cursor:pointer;
 }
 
-footer{
+#popup{
+
+position:fixed;
+bottom:20px;
+left:20px;
+
 background:black;
 color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
+
+padding:10px;
+
+display:none;
+
 }
