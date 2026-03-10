@@ -14,15 +14,13 @@
 
 <body>
 
+
 <header>
 
-<div class="logo">
-
-<img src="Screenshot_2026-03-10-23-00-14-34_6012fa4d4ddec268fc5c7112cbb265e7.jpg" height="40">
-
-</div>
+<img class="logo" src="Screenshot_2026-03-10-23-00-14-34_6012fa4d4ddec268fc5c7112cbb265e7.jpg">
 
 </header>
+
 
 
 <div class="container">
@@ -34,28 +32,21 @@
 
 <img id="main-image" src="Screenshot_2026-03-09-12-41-46-15_c4b2fae5edd267b2847f1b32e9bc41c3.jpg">
 
-
 <div class="thumbs">
 
 <img src="Screenshot_2026-03-09-12-41-46-15_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-
 <img src="Screenshot_2026-03-09-12-42-13-26_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-
 <img src="Screenshot_2026-03-10-21-07-13-45_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-
 <img src="Screenshot_2026-03-10-21-07-32-18_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-
 <img src="Screenshot_2026-03-10-21-07-47-91_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-
 <img src="Screenshot_2026-03-10-21-08-10-54_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-
 <img src="Screenshot_2026-03-10-21-08-47-22_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-
 <img src="Screenshot_2026-03-10-21-09-10-09_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
 
 </div>
 
 </div>
+
 
 
 <div class="details">
@@ -68,15 +59,15 @@
 
 </div>
 
+
 <div class="price">
 
 <span class="old">₹1899</span>
-
 <span class="new">₹799</span>
-
 <span class="off">58% OFF</span>
 
 </div>
+
 
 <div class="delivery">
 
@@ -84,15 +75,17 @@
 
 </div>
 
-<button class="buybtn">
 
-Buy Now
+<div class="timer">
 
-</button>
+⚡ Offer Ends In: <span id="countdown"></span>
+
+</div>
+
 
 <div class="stock">
 
-⚡ Only 23 units left
+Only 23 Units Left
 
 </div>
 
@@ -101,6 +94,7 @@ Buy Now
 </div>
 
 </div>
+
 
 
 <section class="features">
@@ -110,15 +104,10 @@ Buy Now
 <ul>
 
 <li>12.4mm Dynamic Drivers</li>
-
 <li>Active Noise Cancellation</li>
-
 <li>Ultra Bass Technology</li>
-
 <li>Bluetooth 5.4</li>
-
 <li>35.5 Hours Battery Backup</li>
-
 <li>Sweat & Water Resistant</li>
 
 </ul>
@@ -126,92 +115,12 @@ Buy Now
 </section>
 
 
-<section class="specs">
-
-<h2>Specifications</h2>
-
-<table>
-
-<tr>
-<td>Brand</td>
-<td>CMF by Nothing</td>
-</tr>
-
-<tr>
-<td>Color</td>
-<td>Orange</td>
-</tr>
-
-<tr>
-<td>Bluetooth Version</td>
-<td>5.4</td>
-</tr>
-
-<tr>
-<td>Battery</td>
-<td>546 mAh</td>
-</tr>
-
-<tr>
-<td>Playback</td>
-<td>35.5 Hours</td>
-</tr>
-
-<tr>
-<td>Driver</td>
-<td>12.4 mm Dynamic</td>
-</tr>
-
-<tr>
-<td>Noise Cancellation</td>
-<td>Yes</td>
-</tr>
-
-</table>
-
-</section>
-
-
-<section class="reviews">
-
-<h2>Top Reviews</h2>
-
-<div class="review">
-
-<strong>Rahul Sharma</strong> ⭐⭐⭐⭐⭐  
-Been using it for a week now. Sound quality is great.
-
-</div>
-
-<div class="review">
-
-<strong>Aman Verma</strong> ⭐⭐⭐⭐  
-Noise cancellation is very good.
-
-</div>
-
-<div class="review">
-
-<strong>Vikas Patel</strong> ⭐⭐⭐⭐⭐  
-Bass lovers will love it.
-
-</div>
-
-<div class="review">
-
-<strong>Rohit Singh</strong> ⭐⭐⭐⭐  
-Design is amazing.
-
-</div>
-
-</section>
-
 
 <section class="order">
 
-<h2>Place Order</h2>
+<h2>Enter Delivery Details</h2>
 
-<form>
+<form id="orderForm">
 
 <input type="text" placeholder="Full Name" required>
 
@@ -221,15 +130,58 @@ Design is amazing.
 
 <input type="text" placeholder="Pincode" required>
 
-<button class="orderbtn">
+<button type="button" onclick="showPayment()">
 
-Place Order
+Continue To Payment
 
 </button>
 
 </form>
 
+
+<div id="paymentSection" style="display:none">
+
+<h3>Select Payment Method</h3>
+
+<form>
+<script src="https://checkout.razorpay.com/v1/payment-button.js"
+data-payment_button_id="pl_SPcGcqexgs26oT"
+async>
+</script>
+</form>
+
+</div>
+
 </section>
+
+
+
+<section class="reviews">
+
+<h2>Top Reviews</h2>
+
+<div class="review">
+<strong>Rahul Sharma</strong> ⭐⭐⭐⭐⭐  
+Sound quality is amazing.
+</div>
+
+<div class="review">
+<strong>Aman Verma</strong> ⭐⭐⭐⭐  
+Noise cancellation works great.
+</div>
+
+<div class="review">
+<strong>Vikas Patel</strong> ⭐⭐⭐⭐⭐  
+Bass lovers will love it.
+</div>
+
+<div class="review">
+<strong>Rohit Singh</strong> ⭐⭐⭐⭐  
+Design is premium.
+</div>
+
+</section>
+
 
 
 <footer>
@@ -237,6 +189,14 @@ Place Order
 © 2026 Coreconics
 
 </footer>
+
+
+
+<div id="popup">
+
+🔥 Ramesh from Delhi just bought this!
+
+</div>
 
 
 <script src="script.js"></script>
