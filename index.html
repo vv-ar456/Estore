@@ -14,7 +14,6 @@
 
 <body>
 
-
 <header>
 
 <img class="logo" src="Screenshot_2026-03-10-23-00-14-34_6012fa4d4ddec268fc5c7112cbb265e7.jpg">
@@ -22,11 +21,9 @@
 </header>
 
 
-
 <div class="container">
 
 <div class="product-grid">
-
 
 <div class="gallery">
 
@@ -48,14 +45,13 @@
 </div>
 
 
-
 <div class="details">
 
 <h1>CMF Buds 2a True Wireless Earbuds</h1>
 
 <div class="rating">
 
-⭐⭐⭐⭐⭐ 4.5 | 8.2K Reviews
+⭐⭐⭐⭐⭐ 4.5 | 8.2k Reviews
 
 </div>
 
@@ -63,15 +59,10 @@
 <div class="price">
 
 <span class="old">₹1899</span>
+
 <span class="new">₹799</span>
+
 <span class="off">58% OFF</span>
-
-</div>
-
-
-<div class="delivery">
-
-🚚 Free Delivery | 4-6 Days
 
 </div>
 
@@ -83,18 +74,25 @@
 </div>
 
 
-<div class="stock">
+<div class="delivery">
 
-Only 23 Units Left
+🚚 Free Delivery | 4-6 Days
+
+</div>
+
+
+<button class="buybtn" onclick="scrollToOrder()">
+
+Buy Now
+
+</button>
+
 
 </div>
 
 </div>
 
 </div>
-
-</div>
-
 
 
 <section class="features">
@@ -104,39 +102,39 @@ Only 23 Units Left
 <ul>
 
 <li>12.4mm Dynamic Drivers</li>
+
 <li>Active Noise Cancellation</li>
+
 <li>Ultra Bass Technology</li>
+
 <li>Bluetooth 5.4</li>
+
 <li>35.5 Hours Battery Backup</li>
-<li>Sweat & Water Resistant</li>
+
+<li>Water Resistant</li>
 
 </ul>
 
 </section>
 
 
-
-<section class="order">
+<section id="orderSection" class="order" style="display:none">
 
 <h2>Enter Delivery Details</h2>
 
-<form id="orderForm">
+<input type="text" placeholder="Full Name">
 
-<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number">
 
-<input type="tel" placeholder="Phone Number" required>
+<input type="text" placeholder="Full Address">
 
-<input type="text" placeholder="Full Address" required>
+<input type="text" placeholder="Pincode">
 
-<input type="text" placeholder="Pincode" required>
-
-<button type="button" onclick="showPayment()">
+<button onclick="showPayment()">
 
 Continue To Payment
 
 </button>
-
-</form>
 
 
 <div id="paymentSection" style="display:none">
@@ -144,10 +142,12 @@ Continue To Payment
 <h3>Select Payment Method</h3>
 
 <form>
+
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_SPcGcqexgs26oT"
 async>
 </script>
+
 </form>
 
 </div>
@@ -155,33 +155,39 @@ async>
 </section>
 
 
-
 <section class="reviews">
 
 <h2>Top Reviews</h2>
 
 <div class="review">
+
 <strong>Rahul Sharma</strong> ⭐⭐⭐⭐⭐  
 Sound quality is amazing.
+
 </div>
 
 <div class="review">
+
 <strong>Aman Verma</strong> ⭐⭐⭐⭐  
 Noise cancellation works great.
+
 </div>
 
 <div class="review">
+
 <strong>Vikas Patel</strong> ⭐⭐⭐⭐⭐  
 Bass lovers will love it.
+
 </div>
 
 <div class="review">
+
 <strong>Rohit Singh</strong> ⭐⭐⭐⭐  
 Design is premium.
+
 </div>
 
 </section>
-
 
 
 <footer>
@@ -191,10 +197,9 @@ Design is premium.
 </footer>
 
 
-
 <div id="popup">
 
-🔥 Ramesh from Delhi just bought this!
+🔥 Someone from Mumbai just bought this!
 
 </div>
 
