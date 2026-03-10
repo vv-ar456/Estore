@@ -6,6 +6,20 @@ document.getElementById("main-image").src = img.src;
 
 
 
+function scrollToOrder(){
+
+document.getElementById("orderSection").style.display="block";
+
+document.getElementById("orderSection").scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+
+
 function showPayment(){
 
 document.getElementById("paymentSection").style.display="block";
@@ -14,19 +28,19 @@ document.getElementById("paymentSection").style.display="block";
 
 
 
-var countDownDate = new Date().getTime() + 3600000;
+var endTime = new Date().getTime() + 3600000;
 
-var x = setInterval(function(){
+setInterval(function(){
 
 var now = new Date().getTime();
 
-var distance = countDownDate - now;
+var distance = endTime - now;
 
-var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var minutes = Math.floor((distance % (1000*60*60))/(1000*60));
 
-var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+var seconds = Math.floor((distance % (1000*60))/1000);
 
-document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s ";
+document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s";
 
 },1000);
 
