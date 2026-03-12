@@ -1,61 +1,91 @@
-function changeImage(img){
+const SUPABASE_URL = "https://blrsnfmljaycubcysbfw.supabase.co"
 
-document.getElementById("main-image").src = img.src;
-
-}
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJscnNuZm1samF5Y3ViY3lzYmZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNjcxMDcsImV4cCI6MjA4ODg0MzEwN30.d_oh9H-GMJ5M0wiEDonuVrJQSKqCGPToeuaIDNohIxs"
 
 
 
-function scrollToOrder(){
+function showForm(){
 
-document.getElementById("orderSection").style.display="block";
-
-document.getElementById("orderSection").scrollIntoView({
-
-behavior:"smooth"
-
-});
+document.getElementById("orderForm").style.display="block"
 
 }
 
 
 
-function showPayment(){
+async function placeCOD(){
 
-document.getElementById("paymentSection").style.display="block";
+let name=document.getElementById("name").value
+
+let phone=document.getElementById("phone").value
+
+let address=document.getElementById("address").value
+
+let pincode=document.getElementById("pincode").value
+
+
+
+if(!name || !phone || !address || !pincode){
+
+alert("Please fill all details")
+
+return
 
 }
 
 
 
-var endTime = new Date().getTime() + 3600000;
+try{
 
-setInterval(function(){
+let res=await fetch(SUPABASE_URL+"/rest/v1/orders",{
 
-var now = new Date().getTime();
+method:"POST",
 
-var distance = endTime - now;
+headers:{
 
-var minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+"Content-Type":"application/json",
 
-var seconds = Math.floor((distance % (1000*60))/1000);
+"apikey":SUPABASE_KEY,
 
-document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s";
+"Authorization":"Bearer "+SUPABASE_KEY,
 
-},1000);
+"Prefer":"return=minimal"
+
+},
+
+body:JSON.stringify({
+
+name:name,
+
+phone:phone,
+
+address:address,
+
+pincode:pincode,
+
+payment_method:"COD"
+
+})
+
+})
 
 
 
-setInterval(function(){
+if(res.ok){
 
-var popup = document.getElementById("popup");
+alert("Order placed successfully! Pay ₹799 on delivery.")
 
-popup.style.display="block";
+}else{
 
-setTimeout(function(){
+alert("Order failed. Please try again.")
 
-popup.style.display="none";
+}
 
-},4000);
 
-},15000);
+
+}catch(err){
+
+alert("Network error")
+
+}
+
+}
