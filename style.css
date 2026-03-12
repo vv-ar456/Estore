@@ -1,121 +1,33 @@
 body{
+
 font-family:Arial;
-margin:0;
-background:#f2f2f2;
-}
 
-header{
-background:black;
-padding:10px;
 text-align:center;
-}
 
-.logo{
-height:40px;
-}
+padding:40px;
 
-.container{
-background:white;
-padding:20px;
-}
-
-.product-grid{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-}
-
-.gallery img{
-width:300px;
-}
-
-.thumbs img{
-width:60px;
-margin:5px;
-cursor:pointer;
-}
-
-.details{
-max-width:400px;
-}
-
-.price{
-font-size:28px;
-margin-top:10px;
-}
-
-.old{
-text-decoration:line-through;
-color:gray;
-}
-
-.new{
-color:green;
-font-weight:bold;
-}
-
-.off{
-color:red;
-}
-
-.timer{
-color:red;
-margin-top:10px;
-}
-
-.buybtn{
-
-margin-top:20px;
-padding:15px;
-
-background:orange;
-
-border:none;
-
-font-size:18px;
-
-cursor:pointer;
-
-width:100%;
-
-}
-
-.features,
-.order,
-.reviews{
-background:white;
-margin-top:20px;
-padding:20px;
 }
 
 input{
-width:100%;
-padding:12px;
-margin:10px 0;
-}
 
-button{
-background:orange;
-border:none;
-padding:15px;
-font-size:16px;
-cursor:pointer;
-}
+display:block;
 
-#popup{
-
-position:fixed;
-
-bottom:20px;
-
-left:20px;
-
-background:black;
-
-color:white;
+margin:10px auto;
 
 padding:10px;
 
-display:none;
+width:250px;
+
+}
+
+button{
+
+padding:12px;
+
+margin:10px;
+
+background:orange;
+
+border:none;
 
 }
