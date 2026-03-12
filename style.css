@@ -1,7 +1,7 @@
 body{
 font-family:Arial;
 margin:0;
-background:#f4f4f4;
+background:#f5f5f5;
 text-align:center;
 }
 
@@ -11,21 +11,47 @@ padding:20px;
 }
 
 .logo{
-width:80px;
-border-radius:50%;
+width:70px;
+}
+
+.hero{
+width:90%;
+max-width:350px;
+margin-top:10px;
 }
 
 .price{
-font-size:22px;
+font-size:28px;
 font-weight:bold;
+color:#111;
+}
+
+.price span{
+font-size:16px;
+color:green;
+}
+
+.timer{
+background:#ffeded;
+padding:10px;
+margin:10px;
+font-weight:bold;
+color:red;
 }
 
 .buyBtn{
-background:orange;
+background:#ff9800;
 border:none;
-padding:12px 25px;
-font-size:18px;
+padding:14px 30px;
+font-size:20px;
+color:white;
 cursor:pointer;
+}
+
+.trust{
+margin-top:10px;
+font-size:14px;
+color:#555;
 }
 
 .gallery{
@@ -34,25 +60,21 @@ padding:20px;
 margin-top:20px;
 }
 
-.mainProduct{
-width:90%;
-max-width:350px;
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
 }
 
-.thumbs{
-margin-top:15px;
-}
-
-.thumbs img{
-width:70px;
-margin:5px;
-border-radius:8px;
+.grid img{
+width:100%;
+border-radius:10px;
 }
 
 .features{
 background:white;
-padding:20px;
 margin-top:20px;
+padding:20px;
 }
 
 ul{
@@ -65,11 +87,24 @@ margin:10px;
 font-size:17px;
 }
 
+.reviews{
+background:white;
+margin-top:20px;
+padding:20px;
+}
+
+.review{
+background:#f1f1f1;
+padding:10px;
+margin:10px;
+border-radius:8px;
+}
+
 #orderForm{
 display:none;
 background:white;
-padding:20px;
 margin-top:20px;
+padding:20px;
 }
 
 input,textarea{
@@ -88,6 +123,17 @@ border:none;
 cursor:pointer;
 }
 
-.razorpay{
-margin-top:20px;
+.sticky{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+padding:10px;
+box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.sticky button{
+width:90%;
+font-size:20px;
+background:#ff9800;
 }
