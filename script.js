@@ -4,8 +4,11 @@ const supabase = window.supabase.createClient(
 )
 
 function openForm(){
+
 document.getElementById("orderForm").style.display="block"
+
 window.scrollTo(0,document.body.scrollHeight)
+
 }
 
 async function placeCOD(){
@@ -16,8 +19,11 @@ let address=document.getElementById("address").value
 let pincode=document.getElementById("pincode").value
 
 if(!name || !phone || !address){
-alert("Please fill details")
+
+alert("Please fill all details")
+
 return
+
 }
 
 const {data,error}=await supabase
@@ -33,9 +39,13 @@ payment:"COD"
 ])
 
 if(error){
+
 alert("Order failed")
+
 }else{
+
 alert("Order placed successfully")
+
 }
 
 }
