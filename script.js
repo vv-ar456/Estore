@@ -3,7 +3,6 @@ const supabase = window.supabase.createClient(
 "YOUR_PUBLIC_KEY"
 )
 
-
 function openForm(){
 
 document.getElementById("orderForm").style.display="block"
@@ -17,7 +16,6 @@ behavior:"smooth"
 
 }
 
-
 function changeImage(img){
 
 document.getElementById("mainImage").src = img.src
@@ -30,12 +28,12 @@ let time = 600
 
 setInterval(()=>{
 
-let minutes = Math.floor(time/60)
+let m = Math.floor(time/60)
 
-let seconds = time % 60
+let s = time%60
 
 document.getElementById("countdown").innerText =
-minutes + ":" + ("0"+seconds).slice(-2)
+m+":"+("0"+s).slice(-2)
 
 time--
 
@@ -45,10 +43,10 @@ time--
 
 async function placeCOD(){
 
-let name = document.getElementById("name").value
-let phone = document.getElementById("phone").value
-let address = document.getElementById("address").value
-let pincode = document.getElementById("pincode").value
+let name=document.getElementById("name").value
+let phone=document.getElementById("phone").value
+let address=document.getElementById("address").value
+let pincode=document.getElementById("pincode").value
 
 await supabase
 
@@ -58,6 +56,46 @@ await supabase
 {name,phone,address,pincode,payment:"COD"}
 ])
 
-alert("Order placed successfully!")
+alert("Order placed!")
 
 }
+
+
+
+const names=["Rahul","Aman","Priya","Vikas","Neha"]
+const cities=["Delhi","Mumbai","Bangalore","Hyderabad","Pune"]
+
+setInterval(()=>{
+
+let n=names[Math.floor(Math.random()*names.length)]
+let c=cities[Math.floor(Math.random()*cities.length)]
+
+let popup=document.getElementById("popup")
+
+popup.innerText=n+" from "+c+" just ordered this!"
+
+popup.style.display="block"
+
+setTimeout(()=>{
+
+popup.style.display="none"
+
+},3000)
+
+},8000)
+
+
+
+let stock=17
+
+setInterval(()=>{
+
+if(stock>5){
+
+stock--
+
+document.getElementById("stock").innerText=stock
+
+}
+
+},20000)
