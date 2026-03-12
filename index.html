@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CMF Buds 2a | Coreconics</title>
+<title>CMF Buds 2a</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,132 +11,30 @@
 
 <body>
 
-<header>
+<h1>CMF Buds 2a</h1>
 
-<img class="logo" src="Screenshot_2026-03-10-23-00-14-34_6012fa4d4ddec268fc5c7112cbb265e7.jpg">
+<h2>₹799 Free Delivery</h2>
 
-</header>
+<button onclick="showForm()">Buy Now</button>
 
 
-<div class="container">
+<div id="orderForm" style="display:none">
 
-<div class="product-grid">
+<h3>Enter Delivery Details</h3>
 
-<div class="gallery">
+<input id="name" placeholder="Full Name">
 
-<img id="main-image" src="Screenshot_2026-03-09-12-41-46-15_c4b2fae5edd267b2847f1b32e9bc41c3.jpg">
+<input id="phone" placeholder="Phone Number">
 
-<div class="thumbs">
+<input id="address" placeholder="Address">
 
-<img src="Screenshot_2026-03-09-12-41-46-15_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-<img src="Screenshot_2026-03-09-12-42-13-26_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-<img src="Screenshot_2026-03-10-21-07-13-45_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-<img src="Screenshot_2026-03-10-21-07-32-18_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-<img src="Screenshot_2026-03-10-21-07-47-91_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-<img src="Screenshot_2026-03-10-21-08-10-54_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-<img src="Screenshot_2026-03-10-21-08-47-22_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
-<img src="Screenshot_2026-03-10-21-09-10-09_c4b2fae5edd267b2847f1b32e9bc41c3.jpg" onclick="changeImage(this)">
+<input id="pincode" placeholder="Pincode">
 
-</div>
 
-</div>
+<h3>Select Payment</h3>
 
+<button onclick="placeCOD()">Cash On Delivery</button>
 
-<div class="details">
-
-<h1>CMF Buds 2a True Wireless Earbuds</h1>
-
-<div class="rating">
-
-⭐⭐⭐⭐⭐ 4.5 | 8.2k Reviews
-
-</div>
-
-
-<div class="price">
-
-<span class="old">₹1899</span>
-
-<span class="new">₹799</span>
-
-<span class="off">58% OFF</span>
-
-</div>
-
-
-<div class="timer">
-
-⚡ Offer Ends In: <span id="countdown"></span>
-
-</div>
-
-
-<div class="delivery">
-
-🚚 Free Delivery | 4-6 Days
-
-</div>
-
-
-<button class="buybtn" onclick="scrollToOrder()">
-
-Buy Now
-
-</button>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-<section class="features">
-
-<h2>Key Features</h2>
-
-<ul>
-
-<li>12.4mm Dynamic Drivers</li>
-
-<li>Active Noise Cancellation</li>
-
-<li>Ultra Bass Technology</li>
-
-<li>Bluetooth 5.4</li>
-
-<li>35.5 Hours Battery Backup</li>
-
-<li>Water Resistant</li>
-
-</ul>
-
-</section>
-
-
-<section id="orderSection" class="order" style="display:none">
-
-<h2>Enter Delivery Details</h2>
-
-<input type="text" placeholder="Full Name">
-
-<input type="tel" placeholder="Phone Number">
-
-<input type="text" placeholder="Full Address">
-
-<input type="text" placeholder="Pincode">
-
-<button onclick="showPayment()">
-
-Continue To Payment
-
-</button>
-
-
-<div id="paymentSection" style="display:none">
-
-<h3>Select Payment Method</h3>
 
 <form>
 
@@ -149,57 +44,6 @@ async>
 </script>
 
 </form>
-
-</div>
-
-</section>
-
-
-<section class="reviews">
-
-<h2>Top Reviews</h2>
-
-<div class="review">
-
-<strong>Rahul Sharma</strong> ⭐⭐⭐⭐⭐  
-Sound quality is amazing.
-
-</div>
-
-<div class="review">
-
-<strong>Aman Verma</strong> ⭐⭐⭐⭐  
-Noise cancellation works great.
-
-</div>
-
-<div class="review">
-
-<strong>Vikas Patel</strong> ⭐⭐⭐⭐⭐  
-Bass lovers will love it.
-
-</div>
-
-<div class="review">
-
-<strong>Rohit Singh</strong> ⭐⭐⭐⭐  
-Design is premium.
-
-</div>
-
-</section>
-
-
-<footer>
-
-© 2026 Coreconics
-
-</footer>
-
-
-<div id="popup">
-
-🔥 Someone from Mumbai just bought this!
 
 </div>
 
