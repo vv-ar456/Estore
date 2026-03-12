@@ -1,55 +1,67 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CMF Buds 2a</title>
 
 <link rel="stylesheet" href="style.css">
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
 </head>
 
 <body>
 
+<header>
+<img src="logo.jpg" class="logo">
 <h1>CMF Buds 2a</h1>
+<p class="price">₹799 Free Delivery</p>
+<button class="buyBtn" onclick="openForm()">Buy Now</button>
+</header>
 
-<h2>₹799 Free Delivery</h2>
+<section class="product">
+<img src="product.jpg" class="productImg">
+</section>
 
-<button onclick="showForm()">Buy Now</button>
+<section class="features">
+<h2>Key Features</h2>
 
+<ul>
+<li>40H Battery Backup</li>
+<li>HD Sound Quality</li>
+<li>Bluetooth 5.3</li>
+<li>Noise Reduction</li>
+<li>Type-C Fast Charging</li>
+</ul>
 
-<div id="orderForm" style="display:none">
+</section>
 
-<h3>Enter Delivery Details</h3>
+<section id="orderForm">
+
+<h2>Enter Delivery Details</h2>
 
 <input id="name" placeholder="Full Name">
-
 <input id="phone" placeholder="Phone Number">
-
-<input id="address" placeholder="Address">
-
+<textarea id="address" placeholder="Full Address"></textarea>
 <input id="pincode" placeholder="Pincode">
-
-
-<h3>Select Payment</h3>
 
 <button onclick="placeCOD()">Cash On Delivery</button>
 
+<div class="razorpay">
 
 <form>
-
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
-data-payment_button_id="pl_SPcGcqexgs26oT"
-async>
+data-payment_button_id="pl_SPcGcqexgs26oT" async>
 </script>
-
 </form>
 
 </div>
 
+</section>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
