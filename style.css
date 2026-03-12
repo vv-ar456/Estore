@@ -1,33 +1,76 @@
 body{
-
 font-family:Arial;
-
+margin:0;
 text-align:center;
-
-padding:40px;
-
+background:#f4f4f4;
 }
 
-input{
+header{
+padding:20px;
+background:white;
+}
 
-display:block;
+.logo{
+width:80px;
+}
 
-margin:10px auto;
+.price{
+font-size:22px;
+font-weight:bold;
+}
 
+.buyBtn{
+background:orange;
+border:none;
+padding:12px 25px;
+font-size:18px;
+cursor:pointer;
+}
+
+.productImg{
+width:80%;
+max-width:300px;
+margin-top:20px;
+}
+
+.features{
+background:white;
+margin-top:20px;
+padding:20px;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+li{
+margin:10px;
+}
+
+#orderForm{
+display:none;
+background:white;
+padding:20px;
+margin-top:20px;
+}
+
+input,textarea{
+width:90%;
 padding:10px;
-
-width:250px;
-
+margin:10px;
+font-size:16px;
 }
 
 button{
-
-padding:12px;
-
-margin:10px;
-
-background:orange;
-
+padding:12px 20px;
+font-size:16px;
+background:green;
+color:white;
 border:none;
+cursor:pointer;
+}
 
+.razorpay{
+margin-top:20px;
 }
