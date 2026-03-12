@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>CMF Buds 2a</title>
 
@@ -22,18 +21,35 @@
 
 <h1>CMF Buds 2a</h1>
 
-<p class="price">₹799 Free Delivery</p>
+<img src="img1.jpg" class="hero">
+
+<p class="price">₹799 <span>Free Delivery</span></p>
+
+<div class="timer">
+
+Offer Ending In  
+<span id="countdown">10:00</span>
+
+</div>
 
 <button class="buyBtn" onclick="openForm()">Buy Now</button>
+
+<div class="trust">
+
+✔ Cash On Delivery  
+✔ 7 Day Replacement  
+✔ Free Shipping
+
+</div>
 
 </header>
 
 
 <section class="gallery">
 
-<img src="img1.jpg" class="mainProduct">
+<h2>Product Images</h2>
 
-<div class="thumbs">
+<div class="grid">
 
 <img src="img2.jpg">
 <img src="img3.jpg">
@@ -58,10 +74,41 @@
 <li>40 Hours Battery Backup</li>
 <li>Bluetooth 5.3</li>
 <li>Noise Reduction</li>
-<li>Gaming Mode Low Latency</li>
+<li>Low Latency Gaming Mode</li>
 <li>Type-C Fast Charging</li>
 
 </ul>
+
+</section>
+
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review">
+
+⭐⭐⭐⭐⭐  
+"Sound quality amazing for this price!"  
+– Rahul
+
+</div>
+
+<div class="review">
+
+⭐⭐⭐⭐⭐  
+"Battery backup bahut acha hai."  
+– Aman
+
+</div>
+
+<div class="review">
+
+⭐⭐⭐⭐  
+"Value for money earbuds."  
+– Sneha
+
+</div>
 
 </section>
 
@@ -95,6 +142,13 @@ async>
 </div>
 
 </section>
+
+
+<div class="sticky">
+
+<button onclick="openForm()">Buy Now ₹799</button>
+
+</div>
 
 <script src="script.js"></script>
 
