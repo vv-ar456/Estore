@@ -1,139 +1,146 @@
 body{
+
 font-family:Arial;
 margin:0;
-background:#f5f5f5;
+background:#f4f4f4;
 text-align:center;
+
 }
 
 header{
+
 background:white;
 padding:20px;
+
 }
 
 .logo{
-width:70px;
-}
 
-.hero{
-width:90%;
-max-width:350px;
-margin-top:10px;
+width:70px;
+
 }
 
 .price{
+
 font-size:28px;
 font-weight:bold;
-color:#111;
+
 }
 
 .price span{
-font-size:16px;
+
 color:green;
+font-size:16px;
+
 }
 
 .timer{
-background:#ffeded;
+
+background:#ffeaea;
 padding:10px;
 margin:10px;
-font-weight:bold;
 color:red;
+font-weight:bold;
+
 }
 
 .buyBtn{
+
 background:#ff9800;
-border:none;
-padding:14px 30px;
-font-size:20px;
 color:white;
-cursor:pointer;
+padding:15px 30px;
+border:none;
+font-size:20px;
+
 }
 
-.trust{
-margin-top:10px;
-font-size:14px;
-color:#555;
+.hero img{
+
+width:90%;
+max-width:350px;
+margin-top:20px;
+
 }
 
 .gallery{
-background:white;
-padding:20px;
-margin-top:20px;
-}
 
-.grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(3,1fr);
 gap:10px;
+padding:20px;
+
 }
 
-.grid img{
+.gallery img{
+
 width:100%;
-border-radius:10px;
+border-radius:8px;
+cursor:pointer;
+
 }
 
 .features{
+
 background:white;
-margin-top:20px;
 padding:20px;
+
 }
 
-ul{
+.features ul{
+
 list-style:none;
 padding:0;
+
 }
 
-li{
+.features li{
+
+font-size:18px;
 margin:10px;
-font-size:17px;
-}
 
-.reviews{
-background:white;
-margin-top:20px;
-padding:20px;
-}
-
-.review{
-background:#f1f1f1;
-padding:10px;
-margin:10px;
-border-radius:8px;
 }
 
 #orderForm{
+
 display:none;
 background:white;
-margin-top:20px;
 padding:20px;
+
 }
 
 input,textarea{
+
 width:90%;
 padding:12px;
 margin:10px;
 font-size:16px;
+
 }
 
 button{
-padding:12px 20px;
-font-size:16px;
-background:green;
-color:white;
-border:none;
+
 cursor:pointer;
+
 }
 
-.sticky{
+.stickyBuy{
+
 position:fixed;
 bottom:0;
 width:100%;
 background:white;
 padding:10px;
-box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+box-shadow:0 -3px 10px rgba(0,0,0,0.1);
+
 }
 
-.sticky button{
+.stickyBuy button{
+
 width:90%;
+padding:15px;
 font-size:20px;
 background:#ff9800;
+color:white;
+border:none;
+
 }
